@@ -66,3 +66,12 @@
         transform: rotate(.5turn)
     }
 }
+
+.swiper-thumb .swiper-slide {
+    filter: brightness(50%);
+    transition: all 250ms ease-in-out;
+}
+
+.swiper-thumb .swiper-slide-thumb-active {
+    filter: brightness(100%);
+}
