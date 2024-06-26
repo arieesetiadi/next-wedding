@@ -1,13 +1,20 @@
+import { useState } from 'react';
+
+import Hero from '@/components/hero';
 import OnBoarding from '@/components/on-boarding';
 
 export default function HomePage() {
+    const [isOpened, setIsOpened] = useState<boolean>(false);
+
     return (
         <>
-            <OnBoarding />
+            <OnBoarding isOpened={isOpened} setIsOpened={setIsOpened} />
 
-            <main>
-                <h1 className="text-center text-2xl">Home</h1>
-            </main>
+            {isOpened && (
+                <main>
+                    <Hero />
+                </main>
+            )}
         </>
     );
 }

@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 
-export default function OnBoarding() {
-    const [isOpened, setIsOpened] = useState<boolean>(false);
+type Props = {
+    isOpened: boolean;
+    setIsOpened: Dispatch<SetStateAction<boolean>>;
+};
 
+export default function OnBoarding({ isOpened, setIsOpened }: Props) {
     return (
         <div
-            className={`${isOpened ? 'bottom-[100%]' : 'bottom-0'} absolute h-screen w-screen bg-[url('/images/general/photo-quotes-1.webp')] bg-cover bg-[center_55%] bg-no-repeat transition-all duration-500 ease-in-out`}>
+            className={`${isOpened ? 'bottom-[100%]' : 'bottom-0'} absolute z-10 h-screen w-screen bg-[url('/images/general/photo-quotes-1.webp')] bg-cover bg-[center_55%] bg-no-repeat transition-all duration-500 ease-in-out`}>
             <div className="relative h-screen w-screen bg-[linear-gradient(180deg,_#FFFFFF00_30%,_#52231AE6_100%)]">
                 <div className="absolute left-1/2 top-[60%] w-screen -translate-x-1/2 -translate-y-1/2 lg:top-1/2">
                     <span className="ff-times-new-roman mb-2 block text-center text-[20px] uppercase text-white lg:mb-5">
@@ -35,7 +38,12 @@ export default function OnBoarding() {
                             onClick={() => setIsOpened(true)}
                             className="btn btn-light flex w-full justify-center lg:w-auto">
                             <div className="flex gap-2">
-                                <img src="/images/icons/envelope-primary.svg" alt="Envelope Icon" />
+                                <img
+                                    width={14}
+                                    height={14}
+                                    src="/images/icons/envelope-primary.svg"
+                                    alt="Envelope Icon"
+                                />
                                 <span className="ff-times-new-roman text-[14px] uppercase text-primary">
                                     Open Invitation
                                 </span>
