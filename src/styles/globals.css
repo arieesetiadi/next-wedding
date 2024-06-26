@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Font Family */
+.ff-playfair {
+    font-family: var(--ff-playfair);
+}
+
+.ff-italiana {
+    font-family: var(--ff-italiana);
+}
+
+.ff-times-new-roman {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+.ff-inter {
+    font-family: var(--ff-inter);
+}
+
+.ff-dm-mono {
+    font-family: var(--ff-dm-mono);
+}
+
+/* Button */
+.btn {
+    @apply rounded-full border py-2 px-8
+}
+
+.btn-light {
+    @apply bg-light
+}
+
+/* Spinner */
+.custom-loader {
+    width: 50px;
+    height: 50px;
+    display: grid;
+}
+
+.custom-loader::before,
+.custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    --c: radial-gradient(farthest-side, #912728 92%, #0000);
+    background:
+        var(--c) 50% 0,
+        var(--c) 50% 100%,
+        var(--c) 100% 50%,
+        var(--c) 0 50%;
+    background-size: 12px 12px;
+    background-repeat: no-repeat;
+    animation: s2 1s infinite;
+}
+
+.custom-loader::before {
+    margin: 4px;
+    filter: hue-rotate(45deg);
+    background-size: 8px 8px;
+    animation-timing-function: linear
+}
+
+@keyframes s2 {
+    100% {
+        transform: rotate(.5turn)
+    }
+}

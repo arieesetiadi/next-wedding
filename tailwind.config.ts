@@ -7,16 +7,17 @@ const config: Config = {
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
-        colors: {
-            'color-primary': '#912728',
-            'color-primary-50': '#9127297a',
-            'color-primary-dark': '#441E15',
-            'color-secondary': '#FAA370',
-            'color-secondary-light': '#FEEDE2',
-            'color-danger': '#C84108',
-            'color-light': '#FAF2F1',
-            'color-white': '#FFFFFF',
-            'color-dark': '#333333',
+        extend: {
+            colors: {
+                'primary': '#912728',
+                'primary-50': '#9127297a',
+                'primary-dark': '#441E15',
+                'secondary': '#FAA370',
+                'secondary-light': '#FEEDE2',
+                'danger': '#C84108',
+                'light': '#FAF2F1',
+                'dark': '#333333',
+            },
         },
     },
     plugins: [],

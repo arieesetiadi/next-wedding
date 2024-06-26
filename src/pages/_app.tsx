@@ -1,5 +1,4 @@
 import '@/styles/globals.css';
-import '@/styles/utilities.css';
 
 import { type AppProps } from 'next/app';
 import { Playfair_Display, Italiana, Inter, DM_Mono } from 'next/font/google';

@@ -1,10 +1,13 @@
+import OnBoarding from '@/components/on-boarding';
+
 export default function HomePage() {
     return (
-        <div>
-            <h1 className="ff-playfair">PlayFair &</h1>
-            <h1 className="ff-italiana">Italiana</h1>
-            <h1 className="ff-inter">Inter</h1>
-            <h1 className="ff-dm-mono">DM Mono</h1>
-        </div>
+        <>
+            <OnBoarding />
+
+            <main>
+                <h1 className="text-center text-2xl">Home</h1>
+            </main>
+        </>
     );
 }
