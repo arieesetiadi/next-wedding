@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
-import Hero from '@/components/hero';
 import OnBoarding from '@/components/on-boarding';
+import Hero from '@/components/hero';
+import About from '@/components/about';
 
 export default function HomePage() {
     const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -13,6 +14,7 @@ export default function HomePage() {
             {isOpened && (
                 <main>
                     <Hero />
+                    <About />
                 </main>
             )}
         </>
