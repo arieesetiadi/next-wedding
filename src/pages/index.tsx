@@ -5,6 +5,7 @@ import Hero from '@/components/hero';
 import About from '@/components/about';
 import Gallery from '@/components/gallery';
 import Countdown from '@/components/countdown';
+import Location from '@/components/location';
 
 export default function HomePage() {
     const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -19,6 +20,7 @@ export default function HomePage() {
                     <About />
                     <Gallery />
                     <Countdown />
+                    <Location />
                 </main>
             )}
         </>

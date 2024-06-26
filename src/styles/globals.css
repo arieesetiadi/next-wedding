@@ -32,6 +32,10 @@
     @apply bg-light
 }
 
+.btn-primary {
+    @apply bg-primary
+}
+
 /* Spinner */
 .custom-loader {
     width: 50px;
