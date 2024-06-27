@@ -1,4 +1,19 @@
+import toast from 'react-hot-toast';
+
 export default function Gift() {
+    const bankAccount1 = '1234567890';
+    const bankAccount2 = '0987654321';
+
+    async function copyToClipboard(content: string) {
+        try {
+            await navigator.clipboard.writeText(content);
+            toast.success('Copied!');
+        } catch (err) {
+            toast.error('Failed to Copy!');
+            console.error(err);
+        }
+    }
+
     return (
         <section className="px-4 py-20">
             <div className="mx-auto max-w-screen-lg">
@@ -27,7 +42,7 @@ export default function Gift() {
 
                             <div className="bg-light p-4">
                                 <span className="ff-dm-mono mb-3 block text-center text-[20px] font-[500] text-black lg:mb-2">
-                                    1234567890
+                                    {bankAccount1}
                                 </span>
 
                                 <span className="ff-times-new-roman mb-3 block text-center text-[20px] font-[400] text-primary-dark lg:mb-3">
@@ -35,7 +50,10 @@ export default function Gift() {
                                 </span>
 
                                 <div className="flex justify-center">
-                                    <button type="button" className="btn btn-rounded btn-primary w-full sm:w-auto">
+                                    <button
+                                        onClick={() => copyToClipboard(bankAccount1)}
+                                        type="button"
+                                        className="btn btn-rounded btn-primary w-full sm:w-auto">
                                         <div className="flex items-center justify-center gap-2">
                                             <img
                                                 width={16}
@@ -62,7 +80,7 @@ export default function Gift() {
 
                             <div className="bg-light p-4">
                                 <span className="ff-dm-mono mb-3 block text-center text-[20px] font-[500] text-black lg:mb-2">
-                                    0987654321
+                                    {bankAccount2}
                                 </span>
 
                                 <span className="ff-times-new-roman mb-3 block text-center text-[20px] font-[400] text-primary-dark lg:mb-3">
@@ -70,7 +88,10 @@ export default function Gift() {
                                 </span>
 
                                 <div className="flex justify-center">
-                                    <button type="button" className="btn btn-rounded btn-primary w-full sm:w-auto">
+                                    <button
+                                        onClick={() => copyToClipboard(bankAccount2)}
+                                        type="button"
+                                        className="btn btn-rounded btn-primary w-full sm:w-auto">
                                         <div className="flex items-center justify-center gap-2">
                                             <img
                                                 width={16}

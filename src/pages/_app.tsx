@@ -2,6 +2,7 @@ import '@/styles/globals.css';
 
 import { type AppProps } from 'next/app';
 import { Playfair_Display, Italiana, Inter, DM_Mono } from 'next/font/google';
+import { Toaster } from 'react-hot-toast';
 
 const playfair = Playfair_Display({
     subsets: ['latin'],
@@ -32,6 +33,7 @@ const fontVariableClasses = `${playfair.variable} ${italiana.variable} ${inter.v
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <div className={fontVariableClasses}>
+            <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
             <Component {...pageProps} />
         </div>
     );
