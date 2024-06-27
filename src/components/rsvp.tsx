@@ -3,7 +3,7 @@ import RsvpForm from './rsvp-form';
 
 export default function Rsvp() {
     return (
-        <section className="mt-10 px-4 pb-20">
+        <section id="rsvp" className="pt-10 px-4 pb-20">
             <div className="mx-auto max-w-screen-lg">
                 {/* Header */}
                 <div className="mb-10">
