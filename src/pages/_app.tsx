@@ -33,7 +33,7 @@ const fontVariableClasses = `${playfair.variable} ${italiana.variable} ${inter.v
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <div className={fontVariableClasses}>
-            <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
+            <Toaster position="top-center" toastOptions={{ duration: 3000, style: { maxWidth: 1000 } }} />
             <Component {...pageProps} />
         </div>
     );

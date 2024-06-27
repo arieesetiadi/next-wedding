@@ -8,6 +8,7 @@ import Countdown from '@/components/countdown';
 import Location from '@/components/location';
 import Quotes from '@/components/quotes';
 import Gift from '@/components/gift';
+import Rsvp from '@/components/rsvp';
 
 export default function HomePage() {
     const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -25,6 +26,7 @@ export default function HomePage() {
                     <Location />
                     <Quotes />
                     <Gift />
+                    <Rsvp />
                 </main>
             )}
         </>
