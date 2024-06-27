@@ -7,6 +7,7 @@ import Gallery from '@/components/gallery';
 import Countdown from '@/components/countdown';
 import Location from '@/components/location';
 import Quotes from '@/components/quotes';
+import Gift from '@/components/gift';
 
 export default function HomePage() {
     const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -23,6 +24,7 @@ export default function HomePage() {
                     <Countdown />
                     <Location />
                     <Quotes />
+                    <Gift />
                 </main>
             )}
         </>

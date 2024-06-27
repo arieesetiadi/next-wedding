@@ -23,7 +23,7 @@ const inter = Inter({
 
 const dmMono = DM_Mono({
     subsets: ['latin'],
-    weight: ['400'],
+    weight: ['400', '500'],
     variable: '--ff-dm-mono',
 });
 
