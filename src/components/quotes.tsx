@@ -7,7 +7,7 @@ export default function Quotes() {
                 <div className="mx-auto max-w-screen-lg">
                     <div className="flex flex-wrap items-center">
                         <div className="mb-10 w-full lg:mb-0 lg:w-1/2">
-                            <img
+                            <Image
                                 width={40}
                                 height={40}
                                 src="/images/icons/feather.png"

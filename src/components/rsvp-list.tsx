@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function RsvpList() {
     return (
         <>
@@ -13,7 +15,12 @@ export default function RsvpList() {
                                 </span>
 
                                 <div className="flex items-center gap-1 rounded-full bg-secondary px-2 py-1">
-                                    <img width="14" height="14" src="/images/icons/check-primary.svg" />
+                                    <Image
+                                        width="14"
+                                        height="14"
+                                        src="/images/icons/check-primary.svg"
+                                        alt="Check Icon"
+                                    />
                                     <span className="ff-times-new-roman text-[12px] text-primary lg:text-[14px]">
                                         Will Attend
                                     </span>
@@ -26,7 +33,7 @@ export default function RsvpList() {
                             </p>
 
                             <div className="flex gap-2">
-                                <img
+                                <Image
                                     width="14"
                                     height="14"
                                     src="/images/icons/clock-primary-dark.svg"

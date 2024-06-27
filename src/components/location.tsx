@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Location() {
     return (
         <section className="px-4 py-20">
@@ -18,7 +20,7 @@ export default function Location() {
 
                     <div className="mt-5 flex w-full items-center lg:mb-0 lg:mt-0 lg:w-1/2">
                         <div>
-                            <img
+                            <Image
                                 width={40}
                                 height={40}
                                 src="/images/icons/feather.png"
@@ -33,7 +35,12 @@ export default function Location() {
                             <div className="mb-3 block py-2 lg:mb-5 lg:flex lg:gap-5">
                                 <div className="mb-3 flex items-center gap-2 lg:mb-0">
                                     <div className="grid place-items-center rounded-full bg-secondary p-2">
-                                        <img src="/images/icons/date-primary.svg" alt="Calendar Icon" />
+                                        <Image
+                                            width={14}
+                                            height={14}
+                                            src="/images/icons/date-primary.svg"
+                                            alt="Calendar Icon"
+                                        />
                                     </div>
 
                                     <span className="ff-times-new-roman inline-block text-[16px] font-[400] uppercase text-primary-dark">
@@ -43,7 +50,12 @@ export default function Location() {
 
                                 <div className="flex items-center gap-2">
                                     <div className="grid place-items-center rounded-full bg-secondary p-2">
-                                        <img src="/images/icons/clock-primary.svg" alt="Clock Icon" />
+                                        <Image
+                                            width={14}
+                                            height={14}
+                                            src="/images/icons/clock-primary.svg"
+                                            alt="Clock Icon"
+                                        />
                                     </div>
 
                                     <span className="ff-times-new-roman inline-block text-[16px] font-[400] uppercase text-primary-dark">
@@ -67,7 +79,7 @@ export default function Location() {
                                     target="_blank"
                                     href="https://maps.app.goo.gl/yHTG8pd8d3W3CRbq8"
                                     className="btn btn-primary inline-flex w-auto items-center justify-center gap-2">
-                                    <img
+                                    <Image
                                         width={14}
                                         height={14}
                                         src="/images/icons/location-white.svg"
@@ -98,7 +110,7 @@ export default function Location() {
 
                     <div className="order-2 mt-5 flex w-full items-center lg:order-1 lg:mb-0 lg:mt-0 lg:w-1/2">
                         <div>
-                            <img
+                            <Image
                                 width={40}
                                 height={40}
                                 src="/images/icons/feather.png"
@@ -113,7 +125,12 @@ export default function Location() {
                             <div className="mb-3 block py-2 lg:mb-5 lg:flex lg:gap-5">
                                 <div className="mb-3 flex items-center gap-2 lg:mb-0">
                                     <div className="grid place-items-center rounded-full bg-secondary p-2">
-                                        <img src="/images/icons/date-primary.svg" alt="Calendar Icon" />
+                                        <Image
+                                            width={14}
+                                            height={14}
+                                            src="/images/icons/date-primary.svg"
+                                            alt="Calendar Icon"
+                                        />
                                     </div>
 
                                     <span className="ff-times-new-roman inline-block text-[16px] font-[400] uppercase text-primary-dark">
@@ -123,7 +140,12 @@ export default function Location() {
 
                                 <div className="flex items-center gap-2">
                                     <div className="grid place-items-center rounded-full bg-secondary p-2">
-                                        <img src="/images/icons/clock-primary.svg" alt="Clock Icon" />
+                                        <Image
+                                            width={14}
+                                            height={14}
+                                            src="/images/icons/clock-primary.svg"
+                                            alt="Clock Icon"
+                                        />
                                     </div>
 
                                     <span className="ff-times-new-roman inline-block text-[16px] font-[400] uppercase text-primary-dark">
@@ -147,7 +169,7 @@ export default function Location() {
                                     target="_blank"
                                     href="https://maps.app.goo.gl/aRAAfCjuQMgYrzrYA"
                                     className="btn btn-primary inline-flex w-auto items-center justify-center gap-2">
-                                    <img
+                                    <Image
                                         width={14}
                                         height={14}
                                         src="/images/icons/location-white.svg"

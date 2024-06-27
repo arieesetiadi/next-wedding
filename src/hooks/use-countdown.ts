@@ -13,7 +13,7 @@ export default function useCountdown(date: string) {
         setInterval(() => {
             setCountdown(getCountdown(date) as Countdown);
         }, 1000);
-    }, []);
+    }, [date]);
 
     return countdown;
 }

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import GallerySwiper from './gallery-swiper';
 
 export default function Gallery() {
@@ -10,7 +11,7 @@ export default function Gallery() {
                     {/* Header */}
                     <div className="mb-20">
                         <div className="mb-2 flex justify-center">
-                            <img width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
+                            <Image width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
                         </div>
 
                         <h2 className="ff-italiana mb-2 text-center text-[32px] text-primary lg:text-[40px]">

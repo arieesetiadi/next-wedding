@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Dispatch, SetStateAction } from 'react';
 
 type Props = {
@@ -20,7 +21,7 @@ export default function OnBoarding({ isOpened, setIsOpened }: Props) {
                     </h1>
 
                     <div className="flex items-center justify-center gap-2">
-                        <img src="/images/icons/date-white.svg" alt="Date Icon" />
+                        <Image width={16} height={16} src="/images/icons/date-white.svg" alt="Date Icon" />
                         <span className="ff-inter block text-center text-[20px] uppercase text-white">
                             Sunday, July 14th 2024
                         </span>
@@ -38,7 +39,7 @@ export default function OnBoarding({ isOpened, setIsOpened }: Props) {
                             onClick={() => setIsOpened(true)}
                             className="btn btn-light flex w-full justify-center lg:w-auto">
                             <div className="flex gap-2">
-                                <img
+                                <Image
                                     width={14}
                                     height={14}
                                     src="/images/icons/envelope-primary.svg"

@@ -42,7 +42,7 @@ export default function RsvpForm() {
                     <option value="">Number of Guest</option>
 
                     {[1, 2, 3, 4, 5].map((i) => (
-                        <option value={i}>{i} PAX</option>
+                        <option key={i} value={i}>{i} PAX</option>
                     ))}
                 </select>
             </div>

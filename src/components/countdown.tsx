@@ -1,4 +1,5 @@
 import useCountdown from '@/hooks/use-countdown';
+import Image from 'next/image';
 
 export default function Countdown() {
     const { days, hours, minutes, seconds } = useCountdown('2024-07-14');
@@ -7,11 +8,11 @@ export default function Countdown() {
         <section className="relative flex h-[400px] w-full items-center justify-center bg-[url('/images/general/photo-gallery-2.webp')] bg-cover bg-[center_10%] bg-no-repeat px-4 py-20 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:z-20 before:bg-[rgba(68,29,22,0.5)]">
             <div className="z-30 mx-auto w-full max-w-screen-sm">
                 <h2 className="ff-italiana mb-2 text-center text-[32px] text-white lg:mb-3 lg:text-[48px]">
-                    You're Invited
+                    You are Invited
                 </h2>
 
                 <div className="mb-10 flex items-center justify-center gap-2 lg:mb-14">
-                    <img src="/images/icons/date-white.svg" alt="Date Icon" />
+                    <Image width={16} height={16} src="/images/icons/date-white.svg" alt="Date Icon" />
                     <span className="ff-inter block text-center text-[16px] uppercase text-white lg:text-[20px]">
                         Sunday, July 14th 2024
                     </span>

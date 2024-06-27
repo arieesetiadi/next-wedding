@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import toast from 'react-hot-toast';
 
 export default function Gift() {
@@ -20,7 +21,7 @@ export default function Gift() {
                 {/* Header */}
                 <div className="mb-10">
                     <div className="mb-2 flex justify-center">
-                        <img width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
+                        <Image width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
                     </div>
 
                     <h2 className="ff-italiana mb-2 text-center text-[32px] text-primary lg:text-[40px]">
@@ -37,7 +38,7 @@ export default function Gift() {
                     <div className="mb-10 w-full sm:w-1/2">
                         <div className="overflow-hidden rounded-[8px] border border-primary">
                             <div className="flex items-center justify-center border-b border-primary p-4">
-                                <img width={77} height={24} src="/images/icons/bank-bca.png" alt="BCA Icon" />
+                                <Image width={77} height={24} src="/images/icons/bank-bca.png" alt="BCA Icon" />
                             </div>
 
                             <div className="bg-light p-4">
@@ -55,7 +56,7 @@ export default function Gift() {
                                         type="button"
                                         className="btn btn-rounded btn-primary w-full sm:w-auto">
                                         <div className="flex items-center justify-center gap-2">
-                                            <img
+                                            <Image
                                                 width={16}
                                                 height={16}
                                                 src="/images/icons/copy-white.svg"
@@ -75,7 +76,7 @@ export default function Gift() {
                     <div className="w-full sm:w-1/2">
                         <div className="overflow-hidden rounded-[8px] border border-primary">
                             <div className="flex items-center justify-center border-b border-primary p-4">
-                                <img width={77} height={24} src="/images/icons/bank-bca.png" alt="BCA Icon" />
+                                <Image width={77} height={24} src="/images/icons/bank-bca.png" alt="BCA Icon" />
                             </div>
 
                             <div className="bg-light p-4">
@@ -93,7 +94,7 @@ export default function Gift() {
                                         type="button"
                                         className="btn btn-rounded btn-primary w-full sm:w-auto">
                                         <div className="flex items-center justify-center gap-2">
-                                            <img
+                                            <Image
                                                 width={16}
                                                 height={16}
                                                 src="/images/icons/copy-white.svg"

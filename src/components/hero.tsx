@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Hero() {
     return (
         <section className="h-screen w-screen bg-[url('/images/general/photo-quotes-1.webp')] bg-cover bg-[center_55%] bg-no-repeat before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:z-10 before:bg-[rgba(68,29,22,0.2)]">
@@ -12,7 +14,7 @@ export default function Hero() {
                     </h1>
 
                     <div className="mb-14 mt-24 flex justify-center md:mt-14">
-                        <img width={24} height={24} src="/images/icons/mouse-white.svg" alt="Mouse Icon" />
+                        <Image width={24} height={24} src="/images/icons/mouse-white.svg" alt="Mouse Icon" />
                     </div>
                 </div>
             </div>

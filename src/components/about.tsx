@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function About() {
     return (
         <section className="px-4 py-20">
@@ -5,7 +7,7 @@ export default function About() {
                 {/* Header */}
                 <div className="mb-20">
                     <div className="mb-2 flex justify-center">
-                        <img width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
+                        <Image width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
                     </div>
 
                     <h2 className="ff-italiana mb-2 text-center text-[32px] text-primary lg:text-[40px]">
@@ -43,9 +45,9 @@ export default function About() {
                                         target="_blank"
                                         href="https://www.instagram.com/vickpradana?igsh=a2U0djMxeDNzbmg1"
                                         className="inline-flex items-center rounded-[.4rem] bg-secondary p-2">
-                                        <img
-                                            width="20"
-                                            height="20"
+                                        <Image
+                                            width={20}
+                                            height={20}
                                             src="/images/icons/instagram-primary.svg"
                                             alt="Instagram Icon"
                                         />
@@ -55,9 +57,9 @@ export default function About() {
                                         target="_blank"
                                         href="https://www.linkedin.com/in/vicky-pradana-331511148"
                                         className="inline-flex items-center rounded-[.4rem] bg-secondary p-2">
-                                        <img
-                                            width="20"
-                                            height="20"
+                                        <Image
+                                            width={20}
+                                            height={20}
                                             src="/images/icons/linkedin-primary.svg"
                                             alt="LinkedIn Icon"
                                         />
@@ -96,9 +98,9 @@ export default function About() {
                                         target="_blank"
                                         href="https://www.instagram.com/karinagani?igsh=ODgzeDdoaXlkNHAw"
                                         className="inline-flex items-center rounded-[.4rem] bg-secondary p-2">
-                                        <img
-                                            width="20"
-                                            height="20"
+                                        <Image
+                                            width={20}
+                                            height={20}
                                             src="/images/icons/instagram-primary.svg"
                                             alt="Instagram Icon"
                                         />
@@ -108,9 +110,9 @@ export default function About() {
                                         target="_blank"
                                         href="https://www.linkedin.com/in/karina-gani-797674156"
                                         className="inline-flex items-center rounded-[.4rem] bg-secondary p-2">
-                                        <img
-                                            width="20"
-                                            height="20"
+                                        <Image
+                                            width={20}
+                                            height={20}
                                             src="/images/icons/linkedin-primary.svg"
                                             alt="LinkedIn Icon"
                                         />

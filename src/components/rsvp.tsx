@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import RsvpForm from './rsvp-form';
 
 export default function Rsvp() {
@@ -7,7 +8,7 @@ export default function Rsvp() {
                 {/* Header */}
                 <div className="mb-10">
                     <div className="mb-2 flex justify-center">
-                        <img width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
+                        <Image width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
                     </div>
 
                     <h2 className="ff-italiana mb-2 text-center text-[32px] text-primary lg:text-[40px]">RSVP</h2>
