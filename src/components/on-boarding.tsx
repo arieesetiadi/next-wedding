@@ -1,5 +1,6 @@
+import { BacksoundContext } from '@/context/backsound-context';
 import Image from 'next/image';
-import { Dispatch, SetStateAction } from 'react';
+import { Dispatch, SetStateAction, useContext } from 'react';
 
 type Props = {
     isOpened: boolean;
@@ -7,6 +8,13 @@ type Props = {
 };
 
 export default function OnBoarding({ isOpened, setIsOpened }: Props) {
+    const backsound = useContext(BacksoundContext);
+
+    function openInvitation() {
+        setIsOpened(true);
+        backsound?.toggleBacksound();
+    }
+
     return (
         <div
             className={`${isOpened ? 'bottom-[100%]' : 'bottom-0'} absolute z-50 h-screen w-screen bg-[url('/images/general/photo-quotes-1.webp')] bg-cover bg-[center_55%] bg-no-repeat transition-all duration-1000 ease-in-out`}>
@@ -35,9 +43,7 @@ export default function OnBoarding({ isOpened, setIsOpened }: Props) {
                     </p>
 
                     <div className="flex justify-center">
-                        <button
-                            onClick={() => setIsOpened(true)}
-                            className="btn btn-light flex w-full justify-center lg:w-auto">
+                        <button onClick={openInvitation} className="btn btn-light flex w-full justify-center lg:w-auto">
                             <div className="flex gap-2">
                                 <Image
                                     width={14}
