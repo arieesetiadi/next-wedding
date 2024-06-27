@@ -11,6 +11,7 @@ import Gift from '@/components/gift';
 import Rsvp from '@/components/rsvp';
 import RsvpList from '@/components/rsvp-list';
 import Footer from '@/components/footer';
+import FloatingButtons from '@/components/floating-buttons';
 
 export default function HomePage() {
     const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -31,6 +32,7 @@ export default function HomePage() {
                     <Rsvp />
                     <RsvpList />
                     <Footer />
+                    <FloatingButtons />
                 </main>
             )}
         </>
