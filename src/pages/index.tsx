@@ -6,6 +6,7 @@ import About from '@/components/about';
 import Gallery from '@/components/gallery';
 import Countdown from '@/components/countdown';
 import Location from '@/components/location';
+import Quotes from '@/components/quotes';
 
 export default function HomePage() {
     const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -21,6 +22,7 @@ export default function HomePage() {
                     <Gallery />
                     <Countdown />
                     <Location />
+                    <Quotes />
                 </main>
             )}
         </>
