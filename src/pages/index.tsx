@@ -10,6 +10,7 @@ import Quotes from '@/components/quotes';
 import Gift from '@/components/gift';
 import Rsvp from '@/components/rsvp';
 import RsvpList from '@/components/rsvp-list';
+import Footer from '@/components/footer';
 
 export default function HomePage() {
     const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -29,6 +30,7 @@ export default function HomePage() {
                     <Gift />
                     <Rsvp />
                     <RsvpList />
+                    <Footer />
                 </main>
             )}
         </>
