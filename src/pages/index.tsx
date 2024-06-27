@@ -9,6 +9,7 @@ import Location from '@/components/location';
 import Quotes from '@/components/quotes';
 import Gift from '@/components/gift';
 import Rsvp from '@/components/rsvp';
+import RsvpList from '@/components/rsvp-list';
 
 export default function HomePage() {
     const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -27,6 +28,7 @@ export default function HomePage() {
                     <Quotes />
                     <Gift />
                     <Rsvp />
+                    <RsvpList />
                 </main>
             )}
         </>
