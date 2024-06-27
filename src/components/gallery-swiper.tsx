@@ -33,8 +33,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-1.webp`}
                         alt="Gallery Image"
                         loading="lazy"
-                        objectFit="cover"
                         fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -42,9 +43,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-2.webp`}
                         alt="Gallery Image"
                         loading="lazy"
-                        objectFit="cover"
                         fill
-                        className="object-left"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-left"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -52,9 +53,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-3.webp`}
                         alt="Gallery Image"
                         loading="lazy"
-                        objectFit="cover"
                         fill
-                        className="object-[center_35%]"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-[center_35%]"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -62,9 +63,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-4.webp`}
                         alt="Gallery Image"
                         loading="lazy"
-                        objectFit="cover"
                         fill
-                        className="object-bottom"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-bottom"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -72,8 +73,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-5.webp`}
                         alt="Gallery Image"
                         loading="lazy"
-                        objectFit="cover"
                         fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -81,8 +83,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-6.webp`}
                         alt="Gallery Image"
                         loading="lazy"
-                        objectFit="cover"
                         fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -90,8 +93,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-7.webp`}
                         alt="Gallery Image"
                         loading="lazy"
-                        objectFit="cover"
                         fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -99,9 +103,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-8.webp`}
                         alt="Gallery Image"
                         loading="lazy"
-                        objectFit="cover"
                         fill
-                        className="object-[center_75%]"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-[center_75%]"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -109,9 +113,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-9.webp`}
                         alt="Gallery Image"
                         loading="lazy"
-                        objectFit="cover"
                         fill
-                        className="object-[center_20%]"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-[center_20%]"
                     />
                 </SwiperSlide>
             </Swiper>
@@ -131,8 +135,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-1-thumb.webp`}
                         alt="Gallery Image Thumb"
                         loading="lazy"
-                        objectFit="cover"
                         fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -140,9 +145,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-2-thumb.webp`}
                         alt="Gallery Image Thumb"
                         loading="lazy"
-                        objectFit="cover"
                         fill
-                        className="object-left"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-left"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -150,9 +155,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-3-thumb.webp`}
                         alt="Gallery Image Thumb"
                         loading="lazy"
-                        objectFit="cover"
                         fill
-                        className="object-[center_35%]"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-[center_35%]"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -160,9 +165,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-4-thumb.webp`}
                         alt="Gallery Image Thumb"
                         loading="lazy"
-                        objectFit="cover"
                         fill
-                        className="object-bottom"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-bottom"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -170,8 +175,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-5-thumb.webp`}
                         alt="Gallery Image Thumb"
                         loading="lazy"
-                        objectFit="cover"
                         fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -179,8 +185,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-6-thumb.webp`}
                         alt="Gallery Image Thumb"
                         loading="lazy"
-                        objectFit="cover"
                         fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -188,8 +195,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-7-thumb.webp`}
                         alt="Gallery Image Thumb"
                         loading="lazy"
-                        objectFit="cover"
                         fill
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -197,9 +205,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-8-thumb.webp`}
                         alt="Gallery Image Thumb"
                         loading="lazy"
-                        objectFit="cover"
                         fill
-                        className="object-[center_75%]"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-[center_75%]"
                     />
                 </SwiperSlide>
                 <SwiperSlide className="overflow-hidden rounded-[8px]">
@@ -207,9 +215,9 @@ export default function GallerySwiper() {
                         src={`/images/general/photo-gallery-9-thumb.webp`}
                         alt="Gallery Image Thumb"
                         loading="lazy"
-                        objectFit="cover"
                         fill
-                        className="object-[center_20%]"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                        className="object-cover object-[center_20%]"
                     />
                 </SwiperSlide>
             </Swiper>
