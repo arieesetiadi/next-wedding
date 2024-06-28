@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import toast from 'react-hot-toast';
+import EaseInOutDiv from './motions/ease-in-out-div';
 
 export default function Gift() {
     const bankAccount1 = '1234567890';
@@ -19,7 +20,7 @@ export default function Gift() {
         <section className="px-4 py-20">
             <div className="mx-auto max-w-screen-lg">
                 {/* Header */}
-                <div className="mb-10">
+                <EaseInOutDiv className="mb-10">
                     <div className="mb-2 flex justify-center">
                         <Image width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
                     </div>
@@ -32,9 +33,9 @@ export default function Gift() {
                         Your blessing is a very meaningful gift for us. However, if giving is an expression of your
                         love, you can give cashless gifts.
                     </span>
-                </div>
+                </EaseInOutDiv>
 
-                <div className="flex flex-wrap sm:flex-nowrap sm:gap-5 lg:gap-10">
+                <EaseInOutDiv className="flex flex-wrap sm:flex-nowrap sm:gap-5 lg:gap-10">
                     <div className="mb-10 w-full sm:w-1/2">
                         <div className="overflow-hidden rounded-[8px] border border-primary">
                             <div className="flex items-center justify-center border-b border-primary p-4">
@@ -110,7 +111,7 @@ export default function Gift() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </EaseInOutDiv>
             </div>
         </section>
     );

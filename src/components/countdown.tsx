@@ -1,12 +1,13 @@
 import useCountdown from '@/hooks/use-countdown';
 import Image from 'next/image';
+import EaseInOutDiv from './motions/ease-in-out-div';
 
 export default function Countdown() {
     const { days, hours, minutes, seconds } = useCountdown('2024-07-14');
 
     return (
         <section className="relative flex h-[400px] w-full items-center justify-center bg-[url('/images/general/photo-gallery-2.webp')] bg-cover bg-[center_10%] bg-no-repeat px-4 py-20 before:absolute before:bottom-0 before:left-0 before:right-0 before:top-0 before:z-20 before:bg-[rgba(68,29,22,0.5)]">
-            <div className="z-30 mx-auto w-full max-w-screen-sm">
+            <EaseInOutDiv className="z-30 mx-auto w-full max-w-screen-sm">
                 <h2 className="ff-italiana mb-2 text-center text-[32px] text-white lg:mb-3 lg:text-[48px]">
                     You are Invited
                 </h2>
@@ -71,7 +72,7 @@ export default function Countdown() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </EaseInOutDiv>
         </section>
     );
 }

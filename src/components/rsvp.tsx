@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import RsvpForm from './rsvp-form';
+import EaseInOutDiv from './motions/ease-in-out-div';
 
 export default function Rsvp() {
     return (
-        <section id="rsvp" className="pt-10 px-4 pb-20">
+        <section id="rsvp" className="px-4 pb-20 pt-10">
             <div className="mx-auto max-w-screen-lg">
                 {/* Header */}
-                <div className="mb-10">
+                <EaseInOutDiv className="mb-10">
                     <div className="mb-2 flex justify-center">
                         <Image width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
                     </div>
@@ -16,11 +17,11 @@ export default function Rsvp() {
                     <span className="ff-times-new-roman block text-center text-[20px] text-primary-dark">
                         Please RSVP to confirm your attendance at our special day
                     </span>
-                </div>
+                </EaseInOutDiv>
 
-                <div className="mx-auto max-w-lg">
+                <EaseInOutDiv className="mx-auto max-w-lg">
                     <RsvpForm />
-                </div>
+                </EaseInOutDiv>
             </div>
         </section>
     );

@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import EaseInOutDiv from './motions/ease-in-out-div';
 
 export default function About() {
     return (
         <section className="px-4 py-20">
             <div className="mx-auto max-w-screen-lg">
                 {/* Header */}
-                <div className="mb-20">
+                <EaseInOutDiv className="mb-20">
                     <div className="mb-2 flex justify-center">
                         <Image width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
                     </div>
@@ -17,11 +18,11 @@ export default function About() {
                     <span className="ff-times-new-roman block text-center text-[14px] uppercase text-primary-dark">
                         Get to know them even better
                     </span>
-                </div>
+                </EaseInOutDiv>
 
                 <>
                     {/* Male */}
-                    <div className="flex flex-wrap">
+                    <EaseInOutDiv className="flex flex-wrap">
                         <div className="mb-5 w-full lg:mb-0 lg:w-1/2">
                             <img
                                 src="/images/general/photo-male.webp"
@@ -67,14 +68,14 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </EaseInOutDiv>
 
-                    <div className="py-5 lg:py-10">
+                    <EaseInOutDiv className="py-5 lg:py-10">
                         <span className="ff-playfair block text-center text-[32px] uppercase text-danger">&</span>
-                    </div>
+                    </EaseInOutDiv>
 
                     {/* Female */}
-                    <div className="flex flex-wrap">
+                    <EaseInOutDiv className="flex flex-wrap">
                         <div className="order-1 mb-5 w-full lg:order-2 lg:mb-0 lg:flex lg:w-1/2 lg:justify-end">
                             <img
                                 src="/images/general/photo-female.webp"
@@ -120,7 +121,7 @@ export default function About() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </EaseInOutDiv>
                 </>
             </div>
         </section>

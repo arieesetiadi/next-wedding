@@ -1,11 +1,12 @@
 import Image from 'next/image';
+import EaseInOutDiv from './motions/ease-in-out-div';
 
 export default function Location() {
     return (
         <section className="px-4 py-20">
             <div className="mx-auto max-w-screen-lg">
                 {/* Holy Matrimony */}
-                <div className="mb-16 flex flex-wrap lg:mb-28">
+                <EaseInOutDiv className="mb-16 flex flex-wrap lg:mb-28">
                     <div className="mb-5 w-full lg:mb-0 lg:w-1/2">
                         <div className="h-[350px] w-full border-0 lg:h-[400px] lg:w-[400px]">
                             <iframe
@@ -92,10 +93,10 @@ export default function Location() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </EaseInOutDiv>
 
                 {/* Seated Wedding Dinner */}
-                <div className="flex flex-wrap">
+                <EaseInOutDiv className="flex flex-wrap">
                     <div className="order-1 mb-5 w-full lg:order-2 lg:mb-0 lg:w-1/2">
                         <div className="h-[350px] w-full border-0 lg:h-[400px] lg:w-[400px]">
                             <iframe
@@ -182,7 +183,7 @@ export default function Location() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </EaseInOutDiv>
             </div>
         </section>
     );

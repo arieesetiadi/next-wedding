@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import GallerySwiper from './gallery-swiper';
+import EaseInOutDiv from './motions/ease-in-out-div';
 
 export default function Gallery() {
     return (
@@ -9,7 +10,7 @@ export default function Gallery() {
             <section className="bg-secondary-light px-4 py-20">
                 <div className="mx-auto max-w-screen-lg">
                     {/* Header */}
-                    <div className="mb-20">
+                    <EaseInOutDiv className="mb-20">
                         <div className="mb-2 flex justify-center">
                             <Image width={40} height={40} src="/images/icons/feather.png" alt="Feather Icon" />
                         </div>
@@ -21,12 +22,12 @@ export default function Gallery() {
                         <span className="ff-times-new-roman block text-center text-[14px] uppercase text-primary-dark">
                             Photo Gallery
                         </span>
-                    </div>
+                    </EaseInOutDiv>
 
                     {/* Photo Gallery */}
-                    <div className="mx-auto lg:max-w-xl">
+                    <EaseInOutDiv className="mx-auto lg:max-w-xl">
                         <GallerySwiper />
-                    </div>
+                    </EaseInOutDiv>
                 </div>
             </section>
         </>
