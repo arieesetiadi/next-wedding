@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+model Invitation {
+    id          Int      @id @default(autoincrement())
+    code        String   @unique
+    name        String
+    guestCount  Int
+    isPublished Boolean  @default(true)
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+    rsvps       Rsvp[]
+
+    @@index([code])
+    @@map("invitations")
+}
+
+model Rsvp {
+    id           Int        @id @default(autoincrement())
+    phone        String     @unique
+    isAttend     Boolean
+    createdAt    DateTime   @default(now())
+    updatedAt    DateTime   @updatedAt
+    invitationId Int
+    invitation   Invitation @relation(fields: [invitationId], references: [id])
+    guests       Guest[]
+
+    @@map("rsvps")
+}
+
+model Guest {
+    id        Int      @id @default(autoincrement())
+    name      String
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    rsvpId    Int
+    rsvp      Rsvp     @relation(fields: [rsvpId], references: [id])
+
+    @@map("guests")
+}
