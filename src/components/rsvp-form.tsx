@@ -1,14 +1,32 @@
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import { Invitation } from '@prisma/client';
+
+import * as invitationApi from '@/lib/api/invitation.api';
+
 import toast from 'react-hot-toast';
 
 export default function RsvpForm() {
-    async function storeRsvp(e: any) {
+    const [invitation, setInvitation] = useState<Invitation | null>(null);
+
+    const router = useRouter();
+    const guestCode = router.query.guest as string;
+
+    useEffect(() => {
+        (async function fetchInvitation() {
+            const invitation = await invitationApi.findByCode(guestCode);
+            setInvitation(invitation);
+        })();
+    }, [guestCode]);
+
+    async function handleSubmit(e: any) {
         e.preventDefault();
         toast.success('Thank you for your confirmation and blessing!');
         // toast.error('You already submitted an RSVP.');
     }
 
     return (
-        <form onSubmit={storeRsvp}>
+        <form onSubmit={handleSubmit}>
             {/* Input Name */}
             <div className="mb-4">
                 <input
@@ -30,7 +48,9 @@ export default function RsvpForm() {
             {/* Input Confirmation */}
             <div className="mb-4">
                 <select className="ff-times-new-roman w-full rounded-[8px] border border-primary px-2 py-4 text-[14px] text-dark focus:outline-primary">
-                    <option value="">Confirm of Attendance</option>
+                    <option hidden value="">
+                        Confirm of Attendance
+                    </option>
                     <option value="1">Will Attend</option>
                     <option value="0">Cannot Attend</option>
                 </select>
@@ -39,10 +59,14 @@ export default function RsvpForm() {
             {/* Input Number of PAX */}
             <div className="mb-4">
                 <select className="ff-times-new-roman w-full rounded-[8px] border border-primary px-2 py-4 text-[14px] text-dark focus:outline-primary">
-                    <option value="">Number of Guest</option>
+                    <option hidden value="">
+                        Number of Guest
+                    </option>
 
                     {[1, 2, 3, 4, 5].map((i) => (
-                        <option key={i} value={i}>{i} PAX</option>
+                        <option key={i} value={i}>
+                            {i} PAX
+                        </option>
                     ))}
                 </select>
             </div>
