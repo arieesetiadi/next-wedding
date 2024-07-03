@@ -33,18 +33,6 @@ model Rsvp {
     updatedAt    DateTime   @updatedAt
     invitationId Int
     invitation   Invitation @relation(fields: [invitationId], references: [id])
-    guests       Guest[]
 
     @@map("rsvps")
-}
-
-model Guest {
-    id        Int      @id @default(autoincrement())
-    name      String
-    createdAt DateTime @default(now())
-    updatedAt DateTime @updatedAt
-    rsvpId    Int
-    rsvp      Rsvp     @relation(fields: [rsvpId], references: [id])
-
-    @@map("guests")
 }
