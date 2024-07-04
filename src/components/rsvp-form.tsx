@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Invitation } from '@prisma/client';
 import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import * as invitationApi from '@/lib/api/invitation.api';
-import * as rsvpApi from '@/lib/api/rsvp.api';
 import toast from 'react-hot-toast';
+import * as z from 'zod';
+
+import * as rsvpApi from '@/lib/api/rsvp.api';
+import { InvitationWithRsvps } from '@/lib/types/invitation.type';
+import { zodResolver } from '@hookform/resolvers/zod';
+
+type Props = {
+    invitation: InvitationWithRsvps;
+};
 
 type Inputs = {
     name: string;
@@ -16,12 +18,7 @@ type Inputs = {
     greetings: string;
 };
 
-export default function RsvpForm() {
-    const [invitation, setInvitation] = useState<Invitation | null>(null);
-
-    const router = useRouter();
-    const guestCode = router.query.guest as string;
-
+export default function RsvpForm({ invitation }: Props) {
     const form = useForm<Inputs>({
         resolver: zodResolver(
             z.object({
@@ -32,9 +29,18 @@ export default function RsvpForm() {
                 greetings: z.string().min(1, 'This field is required'),
             }),
         ),
+        defaultValues: {
+            name: invitation.name,
+            guestCount: invitation.guestCount,
+        },
     });
 
     async function storeRsvp(data: Inputs) {
+        if (!!invitation?.rsvps.length) {
+            toast.error('You already submitted an RSVP.');
+            return;
+        }
+
         try {
             await rsvpApi.store({
                 phone: data.phone,
@@ -50,18 +56,6 @@ export default function RsvpForm() {
             console.error(error);
         }
     }
-
-    useEffect(() => {
-        (async function fetchInvitation() {
-            const results = await invitationApi.findByCode(guestCode);
-            setInvitation(results);
-        })();
-    }, [guestCode]);
-
-    useEffect(() => {
-        form.setValue('name', invitation?.name as string);
-        form.setValue('guestCount', invitation?.guestCount as number);
-    }, [invitation]);
 
     return (
         <form onSubmit={form.handleSubmit(storeRsvp)}>

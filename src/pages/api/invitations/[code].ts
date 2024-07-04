@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import type { Invitation } from '@prisma/client';
 
 import * as invitationService from '@/lib/services/invitation.service';
+import { type InvitationWithRsvps } from '@/lib/types/invitation.type';
 
 type Data = {
-    invitation: Invitation | null;
+    invitation: InvitationWithRsvps | null;
 };
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
