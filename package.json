@@ -14,12 +14,14 @@
   "dependencies": {
     "@hookform/resolvers": "^3.6.0",
     "@prisma/client": "^5.16.1",
+    "dayjs": "^1.11.11",
     "framer-motion": "^11.2.12",
     "next": "14.2.4",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.52.0",
     "react-hot-toast": "^2.4.1",
+    "react-query": "^3.39.3",
     "swiper": "^11.1.4",
     "zod": "^3.23.8"
   },

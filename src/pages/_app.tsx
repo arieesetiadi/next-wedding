@@ -4,6 +4,7 @@ import { type AppProps } from 'next/app';
 import { Playfair_Display, Italiana, Inter, DM_Mono } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import { BacksoundProvider } from '@/context/backsound-context';
+import QueryProvider from '@/components/providers/query.provider';
 
 const playfair = Playfair_Display({
     subsets: ['latin'],
@@ -36,9 +37,11 @@ export default function App({ Component, pageProps }: AppProps) {
         <div className={fontVariableClasses}>
             <Toaster position="top-center" toastOptions={{ duration: 3000, style: { maxWidth: 1000 } }} />
 
-            <BacksoundProvider>
-                <Component {...pageProps} />
-            </BacksoundProvider>
+            <QueryProvider>
+                <BacksoundProvider>
+                    <Component {...pageProps} />
+                </BacksoundProvider>
+            </QueryProvider>
         </div>
     );
 }
