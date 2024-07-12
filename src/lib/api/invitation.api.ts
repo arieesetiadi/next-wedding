@@ -1,8 +1,8 @@
 import { type InvitationWithRsvps } from '../types/invitation.type';
+import { axiosInstance } from './axios';
 
 export async function findByCode(code: string): Promise<InvitationWithRsvps | null> {
-    const response = await fetch(`http://localhost:3000/api/invitations/${code}`);
-    const { invitation } = await response.json();
-
+    const response = await axiosInstance.get(`/api/invitations/${code}`);
+    const { invitation } = response.data;
     return invitation;
 }
